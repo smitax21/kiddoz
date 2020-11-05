@@ -11,42 +11,42 @@ class Directory extends React.Component {
                       title: 'GIRLS WEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/614faj6bWzL._UX522_.jpg',
                       id: 1,
-                      linkUrl: 'shop/girls wear',
+                      linkUrl: 'girlswear',
                       size: 'medium'
                     },
                     {
                       title: 'BOYS WEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61D1gSc-NoL._UX679_.jpg',
                       id: 2,
-                      linkUrl: 'shop/boys wear',
+                      linkUrl: 'boyswear',
                       size: 'medium'
                     },
                     {
                       title: 'TODDLER',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51RSrbZ32FL._SY450_.jpg',
                       id: 5,
-                      linkUrl: 'shop/toddler',
+                      linkUrl: 'toddler',
                       size: 'medium'
                     },
                     {
                       title: 'GIRLS FOOTWEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51AaSlzx%2B7L._UY575_.jpg',
                       id: 3,
-                      linkUrl: 'shop/girls footwear',
+                      linkUrl: 'girls footwear',
                       size: 'medium'
                     },
                     {
                       title: 'BOYS FOOTWEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61ep-uBiE3L._UX575_.jpg',
                       id: 4,
-                      linkUrl: 'shop/boys footwear',
+                      linkUrl: 'boys footwear',
                       size: 'medium'
                     },
                     {
                         title: 'TOYS',
                         imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91uParqfg8L._SX569_.jpg',
                         id: 6,
-                        linkUrl: 'shop/toys',
+                        linkUrl: 'toys',
                         size: 'medium'
                       }]
                     }
@@ -56,8 +56,8 @@ class Directory extends React.Component {
         return (
         <div className='directory-menu'>
             {
-                this.state.sections.map(({id, imageUrl, title, size}) => (
-                    <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+                this.state.sections.map(({id, ...otherSectionsProp }) => (
+                    <MenuItem key={id} {...otherSectionsProp} />
                 ) )
             }
         </div>

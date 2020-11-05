@@ -1,16 +1,22 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+
 import './App.css';
-// import Directory from './Components/directory/directory.component';
-// import MenuItem from './Components/menu-item/menu-item.component';
+
 import HomePage from './Pages/homepage/homepage.component.jsx';
 
+
+const girlsWear = () => (
+  <div>
+    <h1> Girls Wear Page </h1>
+  </div>
+)
 
 function App() {
   return (
     <div >
-      <HomePage />
-      {/* <MenuItem /> */}
-      {/* <Directory /> */}
+      <Route exact path='/' component={HomePage}/>
+      <Route path='/girlsWear' component={girlsWear}/>
     </div>
   );
 }
