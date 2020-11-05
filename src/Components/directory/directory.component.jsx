@@ -24,22 +24,22 @@ class Directory extends React.Component {
                     {
                       title: 'TODDLER',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51RSrbZ32FL._SY450_.jpg',
-                      id: 5,
+                      id: 3,
                       linkUrl: 'toddler',
                       size: 'medium'
                     },
                     {
                       title: 'GIRLS FOOTWEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51AaSlzx%2B7L._UY575_.jpg',
-                      id: 3,
-                      linkUrl: 'girls footwear',
+                      id: 4,
+                      linkUrl: 'girlsFootWear',
                       size: 'medium'
                     },
                     {
                       title: 'BOYS FOOTWEAR',
                       imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/61ep-uBiE3L._UX575_.jpg',
-                      id: 4,
-                      linkUrl: 'boys footwear',
+                      id: 5,
+                      linkUrl: 'boysFootWear',
                       size: 'medium'
                     },
                     {
