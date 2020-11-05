@@ -5,6 +5,7 @@ import './App.css';
 
 import HomePage from './Pages/homepage/homepage.component.jsx';
 import ShopPage from './Pages/shop/shop.component';
+import Header from './Components/header/header.component';
 
 
 const girlsWear = () => (
@@ -46,6 +47,7 @@ const toys = () => (
 function App() {
   return (
     <div >
+      <Header />
       <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route path='/girlsWear' component={girlsWear}/>
