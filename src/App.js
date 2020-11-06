@@ -5,62 +5,47 @@ import './App.css';
 
 import HomePage from './Pages/homepage/homepage.component.jsx';
 import ShopPage from './Pages/shop/shop.component';
+import SignInAndSignUpPage from './Pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './Components/header/header.component';
+import { auth } from './Firebase/firebase.utils';
 
+class App extends React.Component {
+  constructor() {
+    super();
 
-const girlsWear = () => (
-  <div>
-    <h1> Girls Wear Page </h1>
-  </div>
-)
+    this.state = {
+      currentUser: null
+    }
+  }
 
-const boysWear = () => (
-  <div>
-    <h1> Boys Wear Page </h1>
-  </div>
-)
+  unsubscribeFromAuth = null;
 
-const girlsFootWear = () => (
-  <div>
-    <h1> Girls Foot Wear Page </h1>
-  </div>
-)
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
 
-const boysFootWear = () => (
-  <div>
-    <h1> Boys Foot Wear Page </h1>
-  </div>
-)
+      console.log(user);
+    })
+  }
 
-const toddler = () => (
-  <div>
-    <h1> Toddler Page </h1>
-  </div>
-)
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
 
-const toys = () => (
-  <div>
-    <h1> Toys Page </h1>
-  </div>
-)
+  render() {
+    return (
+      <div >
 
-function App() {
-  return (
-    <div >
-      <Header />
-      <Switch>
-      <Route exact path='/' component={HomePage}/>
-      <Route path='/girlsWear' component={girlsWear}/>
-      <Route path='/boysWear' component={boysWear}/>
-      <Route path='/girlsFootWear' component={girlsFootWear}/>
-      <Route path='/boysFootWear' component={boysFootWear}/>
-      <Route path='/toddler' component={toddler}/>
-      <Route path='/toys' component={toys}/>
-      <Route path='/shop' component={ShopPage} />
-      </Switch>
-
-    </div>
-  );
+        <Header currentUser={ this.state.currentUser }/>
+        <Switch>
+        <Route exact path='/' component={HomePage}/>
+        <Route path='/shop' component={ShopPage} />
+        <Route path='/signin' component={SignInAndSignUpPage} />
+        </Switch>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
