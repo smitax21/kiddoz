@@ -27,19 +27,18 @@ class App extends React.Component {
 
         userRef.onSnapshot(snapShot => {
           this.setState({
-            currentUser: {
+            currentUser : {
               id: snapShot.id,
               ...snapShot.data()
             }
-          });
-
-          console.log(this.state);
+          })
         });
         
-      } 
-      this.setState({ currentUser: userAuth });
-    });
-  }
+        }
+        this.setState({ currentUser: userAuth});
+      })
+
+      }    
 
   componentWillUnmount() {
     this.unsubscribeFromAuth();
@@ -48,13 +47,12 @@ class App extends React.Component {
   render() {
     return (
       <div >
-
         <Header currentUser={ this.state.currentUser }/>
-        <Switch>
-        <Route exact path='/' component={HomePage}/>
-        <Route path='/shop' component={ShopPage} />
-        <Route path='/signin' component={SignInAndSignUpPage} />
-        </Switch>
+          <Switch>
+            <Route exact path='/' component={HomePage}/>
+            <Route path='/shop' component={ShopPage} />
+            <Route path='/signin' component={SignInAndSignUpPage} />
+          </Switch>
       </div>
     );
   }
