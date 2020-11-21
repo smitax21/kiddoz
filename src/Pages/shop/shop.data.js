@@ -61,7 +61,7 @@ const SHOP_DATA = [
       ]
     },
     {
-      id: 2,
+      id: 10,
       title: 'BOYS WEAR',
       routeName: 'boyswear',
       items: [
@@ -116,7 +116,7 @@ const SHOP_DATA = [
       ]
     },
     {
-      id: 3,
+      id: 18,
       title: 'TODDLER',
       routeName: 'toddler',
       items: [
@@ -153,7 +153,7 @@ const SHOP_DATA = [
       ]
     },
     {
-      id: 4,
+      id: 23,
       title: 'Girls Footwear',
       routeName: 'girlsFootWear',
       items: [
@@ -202,7 +202,7 @@ const SHOP_DATA = [
       ]
     },
     {
-      id: 5,
+      id: 30,
       title: 'BOYS FOOTWEAR',
       routeName: 'boysFootWear',
       items: [
@@ -245,7 +245,7 @@ const SHOP_DATA = [
       ]
     },
     {
-      id: 6,
+      id: 36,
       title: 'TOYS',
       routeName: 'toys',
       items: [
