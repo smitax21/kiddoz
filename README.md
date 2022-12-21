@@ -8,32 +8,32 @@ Link to project demo - [Kiddoz](https://kiddozstore.brieflee.com/)
 
 The code for the Kiddoz platform is organized into the following directories:
 
-`public`: Contains static assets such as images and fonts.
+**public**: Contains static assets such as images and fonts.
 
-`src`: Contains the source code for the application.
+**src**: Contains the source code for the application.
 
-`components`: Contains the reusable React components for the application.
+**components**: Contains the reusable React components for the application.
 
-`pages`: Contains the top-level pages for the application.
+**pages**: Contains the top-level pages for the application.
 
-`styles`: Contains the CSS styles for the application.
+**styles**: Contains the CSS styles for the application.
 
-`utils`: Contains utility functions for the application.
+**utils**: Contains utility functions for the application.
 
 
 **Dependencies**
 The Kiddoz platform is built using the following technologies:
 
-* React: A JavaScript library for building user interfaces.  
-* Redux: A javaScript library to centralize application state.
-* Firebase: A realtime database to allow secure access directky from client-side
+* **React** : A JavaScript library for building user interfaces.  
+* **Redux**: A javaScript library to centralize application state.
+* **Firebase**: A realtime database to allow secure access directky from client-side
 
 **Getting started**
 
 To get started with the Kiddoz platform, follow these steps:
 
 #### 1. Clone the repository:
-git clone `https://github.com/smitax21/kiddoz.git`
+`git clone https://github.com/smitax21/kiddoz.git`
 
 #### 2. Navigate to the project directory:
 `cd kiddoz`
@@ -41,7 +41,7 @@ git clone `https://github.com/smitax21/kiddoz.git`
 #### 3. Install the dependencies:
 `npm install`
 
-#### 4.Start the development server:
+#### 4. Start the development server:
 `npm run dev`
 
 The website will be available at `http://localhost:3000/`.
