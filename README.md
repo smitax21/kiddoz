@@ -1,7 +1,7 @@
 # Welcome to the Kiddoz Store!
 
 This project is an e-commerce platform for kids' products. It features a user-friendly interface, a wide range of products, and secure payment options.  
-Link to project demo - [Kiddoz](https://kiddozstore.brieflee.com/)
+Link to project demo - [Kiddoz][(https://kiddoz-app.onrender.com)]
 
 
 **Code structure**
